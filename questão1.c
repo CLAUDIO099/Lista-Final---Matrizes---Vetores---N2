@@ -1,19 +1,25 @@
 #include <stdio.h>
-#include <math.h>
+#define PI 3.14159
 
 int main() {
     float raio, diametro, comprimento, area;
 
-    printf("Digite o raio da circunferência: ");
+    printf("Digite o raio da circunferencia: ");
     scanf("%f", &raio);
 
+    // Calcula o diâmetro
     diametro = 2 * raio;
-    comprimento = 2 * M_PI * raio;
-    area = M_PI * pow(raio, 2);
 
-    printf("Diâmetro: %.2f\n", diametro);
+    // Calcula o comprimento
+    comprimento = 2 * PI * raio;
+
+    // Calcula a área
+    area = PI * raio * raio;
+
+    // Exibe os resultados
+    printf("Diametro: %.2f\n", diametro);
     printf("Comprimento: %.2f\n", comprimento);
-    printf("Área: %.2f\n", area);
+    printf("Area: %.2f\n", area);
 
     return 0;
 }
